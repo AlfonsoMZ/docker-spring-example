@@ -1,0 +1,13 @@
+# Ingorar de Visual Studio
+.devcontainer
+.vscode
+.vscode-server
+
+#Ignorar Archivos e git
+.git
+.gitconfig
+.gitignore
+
+#Ignorar Archivos de historial
+
+
