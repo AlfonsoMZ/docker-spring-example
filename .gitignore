@@ -37,3 +37,7 @@ out/
 ## Ignore Database Dumps
 db/dumps/
 !db/dumps/.keep
+
+# Ignore Var Env
+*.env
+!*example.env
