@@ -9,5 +9,14 @@
 .gitignore
 
 #Ignorar Archivos de historial
+.*hist*
+
+#Ignorar Archivos Docker
+Dockerfile
+*-compose.yml
+.dockerignore
+
+#
+.github/
 
 
