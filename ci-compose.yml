@@ -12,6 +12,7 @@ services:
       target: testing
     depends_on:
       - postgres
+    command: gradle test
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/demo_development
       SPRING_DATASOURCE_USERNAME: postgres
