@@ -44,10 +44,10 @@ jobs:
             run: docker login docker.pkg.github.com -u alfonsomz --password ${{ secrets.GITHUB_TOKEN }}
           
           - name: Pull Test Image
-            uses: ci-compose pull test
+            run: ci-compose pull test
 
           - name: Run Test
-            uses: ci-compose run test gradle test
+            run: ci-compose run test gradle test
     
               
               
