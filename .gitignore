@@ -41,3 +41,7 @@ db/dumps/
 # Ignore Var Env
 *.env
 !*example.env
+
+# Ignore VS Code server
+.vscode-server
+.gitconfig

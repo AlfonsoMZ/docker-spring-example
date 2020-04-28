@@ -2,9 +2,11 @@ version: "3.7"
 
 volumes:
   gradle_user_home:
+  vs_code_server:
+  
 
 services:
-  web:
+  demo:
     image: alfonsomz/spring-demo:development
     build:
       context: .
@@ -14,8 +16,20 @@ services:
     volumes:
       - .:/usr/src
       - gradle_user_home:/usr/local/gradle
+      - vs_code_server:/usr/src/.vscode-server
     depends_on:
       - postgres
+    
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+    stdin_open: true
+    tty: true
+    
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/demo_development
       SPRING_DATASOURCE_USERNAME: postgres
