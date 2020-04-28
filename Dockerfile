@@ -1,6 +1,7 @@
 #Step 1: Begin using the openjdk image  with jdk 14 on Debian Buster 
 FROM openjdk:14-jdk-buster AS development
 
+
 #Step 2: Define de working directory
 WORKDIR /usr/src
 
@@ -20,6 +21,7 @@ RUN curl -L -o "gradle-${GRADLE_VERSION}-bin.zip" \
  && unzip -d /opt/gradle gradle-${GRADLE_VERSION}-bin.zip \
  && rm -rf "gradle-${GRADLE_VERSION}-bin.zip"
 
+
  # Step 8: Define default command 
  CMD  ["gradle", "bootRun"]
 
@@ -30,4 +32,5 @@ RUN curl -L -o "gradle-${GRADLE_VERSION}-bin.zip" \
 
  CMD  ["gradle", "test"]
  #========================================================================
+
 
