@@ -9,14 +9,26 @@
 .gitignore
 
 #Ignorar Archivos de historial
-.*hist*
+.*_hist*
+
+#Ignorar Archivos del sistema operativo
+**/.DS_store
 
 #Ignorar Archivos Docker
 Dockerfile
 *-compose.yml
 .dockerignore
 
-#
+#Ignorar Archivos del dotenv
+*.env
+
+#Ignorar builds
+build/
+
+#Ignorar Gradle Cache
+.gradle/
+
+#Ignorar Gradle Cache
 .github/
 
 
