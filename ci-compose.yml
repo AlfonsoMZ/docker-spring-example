@@ -1,17 +1,15 @@
-# alias cicompose="docker-compose -f docker-compose.yml -f ci-compose.yml"
+# alias ci-compose="docker-compose -f docker-compose.yml -f ci-compose.yml"
 version: "3.7"
-
 
 volumes:
   gradle_user_home:
-
 
 services:
   test:
     image: docker.pkg.github.com/alfonsomz/docker-spring-example/spring-demo:testing
     build:
       context: .
-      #target: testing
+      target: testing
     depends_on:
       - postgres
     environment:

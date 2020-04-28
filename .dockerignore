@@ -31,4 +31,7 @@ build/
 #Ignorar Gradle Cache
 .github/
 
+#Ignorar Gradle Cache
+db/dumps
+
 
