@@ -1,4 +1,4 @@
-FROM openjdk:14-jdk-buster AS development
+FROM openjdk:14-jdk-buster
 
 #2: 
 WORKDIR /usr/src
@@ -19,14 +19,5 @@ RUN curl -L -o "gradle-${GRADLE_VERSION}-bin.zip" \
  && unzip -d /opt/gradle gradle-${GRADLE_VERSION}-bin.zip \
  && rm -rf "gradle-${GRADLE_VERSION}-bin.zip"
 
- # Step:
- CMD  ["gradle", "bootRun"]
-
- #========================================================================
- FROM development AS testing
-
- COPY . /usr/src
-
- CMD  ["gradle", "test"]
- #========================================================================
+ 
 
